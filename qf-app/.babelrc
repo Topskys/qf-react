@@ -1,0 +1,14 @@
+// 让react工程支持装饰器@语法
+{
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ]
+    ]
+}
