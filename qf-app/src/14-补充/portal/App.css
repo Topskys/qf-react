@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+}
+
+.container .left,
+.right {
+    height: 100vh;
+}
+
+.container .left {
+    width: 200px;
+    background-color: ghostwhite;
+}
+
+.container .right {
+    flex: 1;
+    background-color: gold;
+}
