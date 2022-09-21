@@ -1,7 +1,7 @@
 /*
  * @Author: Topskys
  * @Date: 2022-09-04 22:22:33
- * @LastEditTime: 2022-09-21 09:45:25
+ * @LastEditTime: 2022-09-21 11:20:52
  * npm install --save antd-mobile
  */
 import React from 'react';
@@ -13,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 
 // 导入组件
 // import App from './10-Mobx/04-router/App'
-import App from './13-redux-saga/App'
+import App from './13-redux-saga/05-redux/App'
 
 
 // 导入react-redux需要提供的最外层服务store

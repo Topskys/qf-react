@@ -1,20 +1,22 @@
 /*
  * @Author: Topskys
  * @Date: 2022-09-21
- * @LastEditTime: 2022-09-21 10:37:20
+ * @LastEditTime: 2022-09-21 11:11:11
  */
-import { take, fork, call, put } from 'redux-saga/effects'
+import { take, fork, call, put, takeEvery } from 'redux-saga/effects'
 
 /**
  * @description: 监听saga
  */
 export default function* watchSaga1() {
-    while (true) {
-        // take 监听组件发来的action
-        yield take("get-list1")
-        // fork 同步，非阻塞执行异步处理函数
-        yield fork(getList1)
-    }
+    // while (true) {
+    //     // take 监听组件发来的action
+    //     yield take("get-list1")
+    //     // fork 同步，非阻塞执行异步处理函数
+    //     yield fork(getList1)
+    // }
+    // 简写
+    // yield takeEvery("get-list1", getList1) // saga.js合并统一监听
 }
 
 function* getList1() {
@@ -36,4 +38,9 @@ function getListAction1() {
             resolve(["12345", "fdshjh", "78967"])
         }, 2000)
     })
+}
+
+
+export {
+    getList1
 }
