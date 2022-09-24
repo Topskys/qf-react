@@ -1,0 +1,126 @@
+<!--
+ * @Author: Topskys
+ * @Date: 2022-09-23 19:48:39
+ * @LastEditTime: 2022-09-23 20:24:31
+ * 快捷键，!+Tab，创建基础模板
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL</title>
+</head>
+
+<body>
+    <!-- 后端：04-db.js -->
+    <h1>GraphQL</h1>
+    <button onClick="findData()">查询数据</button>
+    <button onClick="createData()">创建数据</button>
+    <button onClick="updateData()">更新数据</button>
+    <button onClick="deleteData()">删除数据</button>
+
+    <script>
+        function findData() {
+            // 无惨查询
+            const queryTest = `
+            query{
+                getNowPlayingList {
+                    id,
+                    name,
+                    poster
+                }
+            }`
+            fetch('/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: queryTest
+                })
+            }).then(res => res.json()).then(res => console.log(res))
+        }
+        function createData() {
+            const queryTest = `
+            mutation($input:FilmInput){
+                createFilm(input: $input){
+                    id,
+                    name,
+                    poster,
+                    price
+                }
+            }`
+            fetch('/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: queryTest,
+                    variables: {
+                        input: {
+                            name: "6",
+                            poster: "http://localhost/6",
+                            price: 6
+                        }
+                    }
+                })
+            }).then(res => res.json()).then(res => console.log(res))
+        }
+        function updateData() {
+            const queryTest = `
+            mutation($id:String!,$input:FilmInput){
+                updateFilm(id:$id,input: $input){
+                    id,
+                    name,
+                    poster,
+                    price
+                }
+            }`
+            fetch('/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: queryTest,
+                    variables: {
+                        id: "632da41434ace15bb4daf6d7",
+                        input: {
+                            name: "66",
+                            poster: "http://localhost/66",
+                            price: 6
+                        }
+                    }
+                })
+            }).then(res => res.json()).then(res => console.log(res))
+        }
+        function deleteData() {
+            const queryTest = `
+            mutation($id:String!){
+                deleteFilm(id:$id)
+            }`
+            fetch('/graphql', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: queryTest,
+                    variables: {
+                        id: "632da36a34ace15bb4daf6d5",
+                    }
+                })
+            }).then(res => res.json()).then(res => console.log(res))
+        }
+    </script>
+</body>
+
+</html>
