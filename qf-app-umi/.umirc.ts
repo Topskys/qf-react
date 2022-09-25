@@ -1,7 +1,7 @@
 /*
  * @Author: Topskys
  * @Date: 2022-09-24 23:32:22
- * @LastEditTime: 2022-09-25 16:51:48
+ * @LastEditTime: 2022-09-25 19:38:38
  */
 import { defineConfig } from 'umi';
 
@@ -34,7 +34,7 @@ export default defineConfig({
     mobile: false,
   },
   dva: {
-
+    // 自定义配置
   }
 
 
