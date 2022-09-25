@@ -1,2 +1,14 @@
+/*
+ * @Author: Topskys
+ * @Date: 2022-09-24 15:55:22
+ * @LastEditTime: 2022-09-24 22:45:02
+ */
 {
+    // 跨域
+    // "proxy": {
+    //     "/api": {
+    //         "target": "http://localhost:8080",
+    //             "changeOrigin": true,
+    //     }
+    // }
 }

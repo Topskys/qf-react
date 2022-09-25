@@ -1,7 +1,7 @@
 /*
  * @Author: Topskys
  * @Date: 2022-09-24 16:13:23
- * @LastEditTime: 2022-09-24 17:14:41
+ * @LastEditTime: 2022-09-24 23:04:07
  */
 import React, { Component } from 'react'
 import { withRouter } from 'dva/router'
@@ -10,7 +10,7 @@ export default class Center extends Component {
     render() {
         return (
             <div>
-                <withChild />
+                <WithChild />
             </div>
         )
     }
@@ -32,4 +32,4 @@ class Child extends React.PureComponent {
  * @description: 新建Child高阶组件（干爹），才会有props(因为Center没有传)
  * Center-p-->withRouter(Child)--p->Child
  */
-const withChild = withRouter(Child)
+const WithChild = withRouter(Child)
