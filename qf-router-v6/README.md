@@ -1,11 +1,13 @@
 <!--
  * @Author: Topskys
- * @Date: 2022-09-04 22:22:33
- * @LastEditTime: 2022-09-25 19:54:12
+ * @Date: 2022-09-25 20:09:00
+ * @LastEditTime: 2022-09-25 20:11:40
 -->
-# 千峰react
 
-# Getting Started with Create React App
+# qf-router-v6
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -77,40 +79,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-# React原理：JSX，使用react构造组件，Babel编译，js对象--> ReactDOM.render()--> DOM元素--> 插入root页面
 
-# 切换回react17
+## 创建react项目
 ```
-npm install react@17.x react-dom@17.x --save
-```
-# 采用路由v5
-```
-npm i react-router-dom@5
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
-# 方向代理react内置，安装
+### react-router v6
 ```
-npm install --save-dev http-proxy-middleware
 ```
-
-## ant-design
-```
-$ npm install antd --save
-$ npm install --save antd-mobile
-```
-
-
-# react-router
-
-react-router︰核心模块，包含React 路由大部分的核心功能，包括路由匹配算法和大部分核心组件和钩子。react-router-dom: React应用中用于路由的软件包，包括react-router的所有内容，并添加了一些特定于DOM的API，包括但不限于BrowserRouter、HashRouter和Link。
-o react-router-native: 用于开发React Native应用，包括react-router的所有内容，并添加了一些特定于React Native的API，包括但不限于ativeRouter和Link。
-
-1.相比较v5，v6的体积变小了
-2.<Route>特性变更
-path:与当前页面对应的URL匹配。
-element:新增，用于决定路由匹配时，渲染哪个组件。代替，v5的component和render。
-3.<Routes>代替了<switch>
-4.<Outlet></Outlet>让嵌套路由更简单
-5.useNavigate代替useHistory
-6.移除了<NavLink/>的activeClassName和activeStyle7.钩子useRoutes代替react-router-config
-8. https://reactrouter.com/docs/en/v6/upgrading/v5
