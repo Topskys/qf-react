@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+/*
+ * @Author: Topskys
+ * @Date: 2022-09-25 20:09:00
+ * @LastEditTime: 2022-09-26 10:30:24
+ */
 import './App.css';
+import { HashRouter, BrowserRouter } from 'react-router-dom'
+import MRouter from './router'
+import TabBar from './components/TabBar.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MRouter></MRouter>
+      <TabBar></TabBar>
+    </BrowserRouter>
   );
 }
 

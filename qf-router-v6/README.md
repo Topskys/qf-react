@@ -1,7 +1,7 @@
 <!--
  * @Author: Topskys
  * @Date: 2022-09-25 20:09:00
- * @LastEditTime: 2022-09-25 20:11:40
+ * @LastEditTime: 2022-09-25 21:12:44
 -->
 
 # qf-router-v6
@@ -87,6 +87,27 @@ cd my-app
 npm start
 ```
 
-### react-router v6
+## react-router v6
 ```
+npm i react-router-dom
 ```
+
+## 切换回react17
+```
+npm install react@17.x react-dom@17.x --save
+```
+
+# react-router
+
+react-router︰核心模块，包含React 路由大部分的核心功能，包括路由匹配算法和大部分核心组件和钩子。react-router-dom: React应用中用于路由的软件包，包括react-router的所有内容，并添加了一些特定于DOM的API，包括但不限于BrowserRouter、HashRouter和Link。
+o react-router-native: 用于开发React Native应用，包括react-router的所有内容，并添加了一些特定于React Native的API，包括但不限于ativeRouter和Link。
+
+1.相比较v5，v6的体积变小了
+2.<Route>特性变更
+path:与当前页面对应的URL匹配。
+element:新增，用于决定路由匹配时，渲染哪个组件。代替，v5的component和render。
+3.<Routes>代替了<switch>
+4.<Outlet></Outlet>让嵌套路由更简单
+5.useNavigate代替useHistory
+6.移除了<NavLink/>的activeClassName和activeStyle7.钩子useRoutes代替react-router-config
+8. https://reactrouter.com/docs/en/v6/upgrading/v5

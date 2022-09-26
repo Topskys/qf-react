@@ -1,0 +1,28 @@
+.Film {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+}
+.FilmActive {
+    color: #335eea;
+}
+
+.Film ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.Film ul li {
+    flex: 1;
+}
+
+.Film ul li a {
+    text-decoration: none;
+}
+
+.Film ul>li>a:hover {
+    text-decoration: underline;
+    color: #335eea;
+}
