@@ -1,9 +1,9 @@
 <!--
  * @Author: Topskys
  * @Date: 2022-09-04 22:22:33
- * @LastEditTime: 2022-09-25 19:54:12
+ * @LastEditTime: 2022-09-26 20:53:13
 -->
-# 千峰react
+# qf-react
 
 # Getting Started with Create React App
 
@@ -77,18 +77,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-# React原理：JSX，使用react构造组件，Babel编译，js对象--> ReactDOM.render()--> DOM元素--> 插入root页面
+### React原理：
+JSX，使用react构造组件，Babel编译，js对象--> ReactDOM.render()--> DOM元素--> 插入root页面
 
-# 切换回react17
+### 切换回react17
 ```
 npm install react@17.x react-dom@17.x --save
 ```
-# 采用路由v5
+### 采用路由v5
 ```
 npm i react-router-dom@5
 ```
 
-# 方向代理react内置，安装
+### 方向代理react内置，安装
 ```
 npm install --save-dev http-proxy-middleware
 ```
